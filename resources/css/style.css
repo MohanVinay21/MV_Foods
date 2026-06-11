@@ -23,6 +23,19 @@ html {
     margin: 0 auto;
 }
 
+/*-----------------header------------------*/
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/hero.jpg);/* this is used to add a dark overlay on the background image to make the text more visible and readable */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+section {
+    padding: 80px 0;
+}
+
 .logo {
     height: 100px;
     width: auto;
@@ -38,17 +51,32 @@ html {
     transform: translate(-50%, -50%);/* this is used to center the text in the middle of the page */   
 }
 
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/hero.jpg);/* this is used to add a dark overlay on the background image to make the text more visible and readable */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
 }
 
-section {
-    padding: 80px 0;
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
 }
 
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;/*this is used to give space between the text and the border when we hover over the link*/ /*8px is for top and bottom and 0 is for left and right*/
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;/*it prevents layout jumping*/  /*layout jumping means when we hover over the link and draw a orange line under because of this the text beside it moves automatically to avoid it we used border but we set it transparent so it is invisible but it takes space now the orange line will be on top of the transparent border and it will not cause any layout jumping*/
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
 
 /*-------------headings------------------*/
 
@@ -159,29 +187,24 @@ h2:after{/*the :after pseudo element is used to add elemets after the content of
     color: #fff;
 }
 
-.main-nav {
-    float: right;
+/*-----------------meals-images------------------*/
+.meals-showcase {
     list-style: none;
-    margin-top: 55px;
+    width: 100%;
 }
 
-.main-nav li {
-    display: inline-block;
-    margin-left: 40px;
+.meals-showcase li {
+    width: 25%;
+    float: left;
+    display: block;
 }
 
-.main-nav li a:link,
-.main-nav li a:visited {
-    padding: 8px 0;/*this is used to give space between the text and the border when we hover over the link*/ /*8px is for top and bottom and 0 is for left and right*/
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
-    font-size: 90%;
-    border-bottom: 2px solid transparent;/*it prevents layout jumping*/  /*layout jumping means when we hover over the link and draw a orange line under because of this the text beside it moves automatically to avoid it we used border but we set it transparent so it is invisible but it takes space now the orange line will be on top of the transparent border and it will not cause any layout jumping*/
-    transition: border-bottom 0.2s;
+.meal-photo {
+    width: 100%;
+    margin: 0;
 }
 
-.main-nav li a:hover,
-.main-nav li a:active {
-    border-bottom: 2px solid #e67e22;
+.meal-photo img {
+    width: 100%;
+    height: auto;
 }
