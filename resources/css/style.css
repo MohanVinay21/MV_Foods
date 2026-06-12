@@ -14,6 +14,15 @@ html {
     text-rendering: optimizelegibility;
 }
 
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '-';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
 /*---------------------------------------------*/
 /*-----------------reusable-------------------- */
 /*---------------------------------------------*/
@@ -33,7 +42,7 @@ header {
 }
 
 section {
-    padding: 80px 0;
+    padding: 80px 0;/*this helps to get space after every section top and bottom 80px and left,right 0*/ 
 }
 
 .logo {
@@ -226,4 +235,51 @@ h2:after{/*the :after pseudo element is used to add elemets after the content of
 .meal-photo img:hover {
     opacity: 1;
     transform: scale(1.03);/* this is used to make the image smaller than its original size when we hover over it to create a zoom effect */
+}
+
+/*-----------------how it works------------------*/
+.section-steps {
+    background-color: #f4f4f4;
+}
+
+.step-box:first-child {
+    text-align: right;/*this also works img because it a inline block element*/
+    padding: 3%;
+    margin-top: 30px;
+}
+
+.step-box:last-child{
+    padding-left: 3%;
+     margin-top: 70px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    border-radius: 55px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 30px;
 }
