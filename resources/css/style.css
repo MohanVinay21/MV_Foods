@@ -82,7 +82,7 @@ section {
 
 h1,
 h2,
-h3 {/*this targets every html element with the tag name h1*//*.h1 would target every html element with the class name h1*/
+h3 {/*this targets every html element with the tag name h1,h2,h3*//*.h1 would target every html element with the class name h1,h2,h3*/
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -118,6 +118,12 @@ h2:after{/*the :after pseudo element is used to add elemets after the content of
     margin: 0 auto;
     margin-top: 20px;
 }
+
+/*----------------feauters------------------*/
+.section-feauters .long {
+    margin-bottom: 30px;
+}
+
 
 /*----------------paragraphs------------------*/
 .long {
@@ -188,6 +194,10 @@ h2:after{/*the :after pseudo element is used to add elemets after the content of
 }
 
 /*-----------------meals-images------------------*/
+.section-meals {
+    padding: 0;
+}
+
 .meals-showcase {
     list-style: none;
     width: 100%;
@@ -202,9 +212,18 @@ h2:after{/*the :after pseudo element is used to add elemets after the content of
 .meal-photo {
     width: 100%;
     margin: 0;
+    overflow: hidden;/* this is used to stop the img from taking more space than its container*/
+    background-color: #000;
 }
 
 .meal-photo img {
+    opacity: 0.7;
     width: 100%;
     height: auto;
+    transform: scale(1.150);/*transform: scale(.....) is used for make image or content big or small with out changing the layout*//* this is used to make the image bigger than its original size to create a zoom effect when we hover over it */
+    transition: transform 0.5s, opacity 0.5s;/* this is used to make the image change smoothly when we hover over it */
+}
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);/* this is used to make the image smaller than its original size when we hover over it to create a zoom effect */
 }
