@@ -158,7 +158,34 @@ h2:after{/*the :after pseudo element is used to add elemets after the content of
     color: #e67e22;
 }
 
+.icon-small {
+    display: inline-block;
+    font-size: 120%;
+    color: #e67e22;
+    text-align: center;
+    width: 30px;
+    margin-right: 10px;
+    /* this makes text to align correctly*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -4px;
+}
 
+/*----------------link------------------*/
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #e67e22;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
 
 /*----------------buttons------------------*/
 
@@ -278,8 +305,24 @@ h2:after{/*the :after pseudo element is used to add elemets after the content of
     margin-right: 25px;
 }
 
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+}
+
 .btn-app img{
     height: 50px;
     width: auto;
     margin-right: 30px;
+}
+
+/*-----------------cities------------------*/
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-features {
+    margin-bottom: 5px;
 }
