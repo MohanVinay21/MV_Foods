@@ -38,7 +38,8 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/hero.jpg);/* this is used to add a dark overlay on the background image to make the text more visible and readable */
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100vh;/*this is used to make img to cover the whole screen height without depending on the parent container, it automatically adjusts it cover whole screen*/
+    background-attachment: fixed;
 }
 
 section {
@@ -325,4 +326,42 @@ a:active {
 
 .city-features {
     margin-bottom: 5px;
+}
+
+/*-----------------testimonials------------------*/
+.section-testimonial {
+background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/back-customers.jpg);
+background-size: cover;
+color:#fff;
+background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2px;
+    line-height: 145%;
+    font-style: italic;
+    position: relative; /*this is written here because in child we use position absolute so, in parent should have relative or else the output changes*/
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content: "\201c";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px; /*when ever we used postion we have to mention top,left,bottom or else it is will take default to avoid this we mention those*/
+    left: -3px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
 }
