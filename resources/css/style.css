@@ -366,7 +366,7 @@ cite img {
     vertical-align: middle;
 }
 
-/*-----------------testimonials------------------*/
+/*-----------------plans------------------*/
 .section-plans {
     background-color: #f4f4f4;
 }
@@ -376,7 +376,7 @@ cite img {
     border-radius: 5px;
     width: 90%;
     margin-left: 5%;
-    box-shadow: 0 2px 2px #e3e3e3;
+    box-shadow: 0 2px 2px #e3e3e3;/*xaxis, yaxis, blur radius, color*/
 }
 
 .plan-box div {
